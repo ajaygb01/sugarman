@@ -14,11 +14,12 @@ app = FastAPI()
 # CORS middleware for cross-origin requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://ajaygb.dev"],  # Allow only frontend origin
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
 )
+
 
 MODEL_FILE = "diabetes_model.pkl"
 
